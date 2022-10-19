@@ -78,10 +78,13 @@ command= "/home/gem5/single_thread_binaries/basicmath/basicmath_large;"\
     + "m5 exit;"
 
 simpoint = SimPoint(
-    simpoint_file_path = Path("/home/studyztp/internal_review/verify_pic/basicmath/basicmath_large.simpts"),
-    weight_file_path = Path("/home/studyztp/internal_review/verify_pic/basicmath/basicmath_large.weights"),
+    simpoint_file_path = Path("simpointsFile.simpts"),
+    weight_file_path = Path("weightsFile.weights"),
+#     SimPoints information can also pass in manually with
+#     simpoint_list = [#list of SimPoints]
+#     weight_list = [#list of Weights]
     simpoint_interval = 100000000,
-    warmup_interval = args.warmup
+    warmup_interval = 100000000
 )
 
 board.set_kernel_disk_workload(
